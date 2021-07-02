@@ -1,0 +1,11 @@
+{% extends 'home.html' %}
+
+{% block content %}
+  
+<h3>Deletar pet</h3>  
+  
+<form action="/deleterecord" method="post">  
+ID do pet: <input type="text" name="id">  
+<input type="submit" value="deletar">  
+</form>  
+{% endblock %}

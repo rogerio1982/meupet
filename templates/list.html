@@ -1,0 +1,22 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<h3><a>Meus pets</a></h3>
+</br>
+
+{% for row in rows %}
+<div class="card text-center" ">
+  <div class="card-body">
+     <img src="{{row["imagem"]}}" style="height:100%; width:50%;" alt="...">
+     <h5 class="card-title">{{row["id"]}}  {{row["data"]}}</h5>
+     <h5 class="card-title"> {{row["nome"]}}</h5>
+     <p class="card-text">{{row["descricao"]}}.</p>
+    <a href="#" class="btn btn-primary">Adotar</a>
+  </div>
+</div>
+
+</br>
+
+ {% endfor %}
+
+{% endblock %}

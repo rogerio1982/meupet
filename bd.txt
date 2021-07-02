@@ -1,0 +1,6 @@
+import sqlite3
+
+conn = sqlite3.connect('hamb.db')
+
+conn.execute('CREATE TABLE pet (id INTEGER PRIMARY KEY AUTOINCREMENT, nome TEXT, descricao TEXT, imagem TEXT, data TEXT)')
+conn.close()

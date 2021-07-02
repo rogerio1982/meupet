@@ -1,0 +1,23 @@
+{% extends 'home.html' %}
+
+{% block content %}
+          <div class="container">
+
+      <form action = "{{ url_for('addrec') }}" method = "POST" enctype="multipart/form-data">
+         <h3>Cadastrar Pets</h3><br>
+          Nome: <br>
+         <input type = "text" name = "nome" value="{{nome}}"/></br>
+         Descrição:<br>
+         <textarea  name="descricao" rows="4" cols="50"  value="{{descricao}}"></textarea>
+         <br>
+         Imagem: <br>
+         <input type = "file" name = "file" value="{{imagem}}"/><br>
+         Data<br>
+         <input type = "text" name = "data" value="{{data}}"/></br></br>
+
+         <input type = "submit" value = "Gravar" /><br>
+      </form>
+      </div>
+
+     
+{% endblock %}
